@@ -54,6 +54,13 @@ The upload completed successfully, confirming that the bucket was functioning as
 - GitHub
 - Technical documentation
 
+- ### 3. Retrieved an Object from Amazon S3
+- The previously uploaded text file was downloaded from the S3 bucket to verify that stored objects could be successfully retrieved.
+- The downloaded file was opened locally and its contents were verified, confirming the basic Amazon S3 object storage workflow:
+- **Upload → Store → Retrieve**
+
+- ![S3 Object Retrieval](screenshots/03-object-retrieval.png)
+
 ## Project Status
 
 In Progress
