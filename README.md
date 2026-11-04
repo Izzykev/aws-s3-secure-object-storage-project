@@ -37,6 +37,21 @@ The upload completed successfully, confirming that the bucket was functioning as
 
 ![S3 Object Upload](screenshots/02-object-uploaded.png)
 
+
+- ### 3. Retrieved an Object from Amazon S3
+- The previously uploaded text file was downloaded from the S3 bucket to verify that stored objects could be successfully retrieved.
+- The downloaded file was opened locally and its contents were verified, confirming the basic Amazon S3 object storage workflow:
+- **Upload → Store → Retrieve**
+
+- ![S3 Object Retrieval](screenshots/03-object-retrieval.png)
+
+- #### 4. Reviewed S3 Block Public Access
+- I reviewed the S3 bucket's public access settings and confirmed that **Block all public access** was enabled.
+- All four individual Block Public Access settings were enabled to help prevent unintended public access through access control lists (ACLs) and bucket policies.
+- The bucket was kept private because this project did not require anonymous or public access to its objects.
+- **Key learning** Cloud storage should remain private by default, and access should only be granted when there is a legitimate requirement.
+- ![S3 Block Public Access](screenshots/04-block-public-access.png)
+
 ## Security Considerations
 
 - AWS access keys and secret access keys are not stored in this repository.
@@ -54,12 +69,6 @@ The upload completed successfully, confirming that the bucket was functioning as
 - GitHub
 - Technical documentation
 
-- ### 3. Retrieved an Object from Amazon S3
-- The previously uploaded text file was downloaded from the S3 bucket to verify that stored objects could be successfully retrieved.
-- The downloaded file was opened locally and its contents were verified, confirming the basic Amazon S3 object storage workflow:
-- **Upload → Store → Retrieve**
-
-- ![S3 Object Retrieval](screenshots/03-object-retrieval.png)
 
 ## Project Status
 
