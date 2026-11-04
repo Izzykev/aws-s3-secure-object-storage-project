@@ -67,6 +67,14 @@ The upload completed successfully, confirming that the bucket was functioning as
 - **Key learning** A bucket does not need a custom bucket policy to function. Permissions should be granted only when there is a specific access requirement.
 - ![S3 Bucket Policy](screenshots/06-bucket-policy.png)
 
+- ### 7. Reviewed S3 Default Encryption
+- I reviewed the S3 bucket's default encryption setting and confirmed that **Server-side encryption with Amazon S3 managed keys (SSE-S3)** was enabled.
+- With SSE-S3, Amazon S3 automatically encrypts objects before storing them and decrypts them when authorized users retrieve them.
+- The configuration also showed that **S3 Bucket Key** was enabled and **SSE-C (customer-provided encryption keys)** was blocked.
+- SSE-S3 was suitable for this project because it provides encryption at rest without requiring me to create or manage encryption keys manually.
+- **Key learning** Encryption at rest protects stored data, while access controls determine who is authorized to access the data. Both are important parts of cloud security.
+- ![S3 Default Encryption](screenshots/07-default-encryption.png)
+
 ## Security Considerations
 
 - AWS access keys and secret access keys are not stored in this repository.
