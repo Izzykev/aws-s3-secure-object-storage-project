@@ -93,6 +93,14 @@ The upload completed successfully, confirming that the bucket was functioning as
 - **Key learning** S3 Versioning preserves previous versions of an object when new content is uploaded using the same object key. This helps protect against accidental overwrites and object recovery.
 - ![S3 Object Versioning Test](screenshots/09-object-versioning-test.png)
 
+- ### 10. Retrieved a Previous Object Version
+- To test object recovery, I used Amazon S3 Versioning to retrieve the original version of Sample Text.txt after uploading a modified version.
+- I enabled the **Show versions** in the S3 console and identified the original object using its version ID of null and file size of 72.0 B.
+- I selected the original version and downloaded it to my local computer. I then opened the downloaded file to verify that its original contents have been preserved.
+- This demonstrated that Amazon S3 can retain and retrieve earlier versions of objects even after newer versions have been uploaded.
+- **Key learning** S3 Versioning supports data recovery by preserving previous object versions. This is useful when files are accidentally overwritten or modified. Downloading an older version does not automatically make it the current version in S3.
+- ![Previous S3 Object Version Retrieved](screenshots/10-previous-version-retrieved.png)
+
 ## Security Considerations
 
 - AWS access keys and secret access keys are not stored in this repository.
