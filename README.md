@@ -59,6 +59,14 @@ The upload completed successfully, confirming that the bucket was functioning as
 - **Key learning** Using Bucket owner enforced, simplifies ownership and helps centralize access management through policies.
 - ![S3 Object Ownership](screenshots/05-object-ownership.png)
 
+- ### 6. Reviewed S3 Bucket Policy
+- I reviewed the S3 bucket's resource-based policy configuration and confirmed that no custom bucket policy was attached.
+- The AWS Management Console displayed **No policy to display**, while confirming that public access was blocked.
+- The project did not require a custom bucket policy because no additional users, applications, or public identities needed access to the stored objects.
+- Authorized access to the bucket can be managed through AWS Identity and Access Management (IAM) policies without creating a public bucket policy.
+- **Key learning** A bucket does not need a custom bucket policy to function. Permissions should be granted only when there is a specific access requirement.
+- ![S3 Bucket Policy](screenshots/06-bucket-policy.png)
+
 ## Security Considerations
 
 - AWS access keys and secret access keys are not stored in this repository.
