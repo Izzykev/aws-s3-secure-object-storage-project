@@ -83,6 +83,16 @@ The upload completed successfully, confirming that the bucket was functioning as
 - **Key learning** S3 Versioning helps protect data by preserving earlier object versions. However, each retained version consumes storage and can increase costs.
 - ![S3 Bucket Versioning Enabled](screenshots/08-versioning-enabled.png)
 
+- ### 9. Tested S3 Object Versioning
+- To test S3 Versioning, I modified the contents of the previously uploaded 'Sample Text.txt' file and uploaded it again to the same S3 bucket using the same object name.
+- I then enabled **Show versions** in the S3 console to examine the stored object versions.
+- The test confirmed that Amazon S3 retained both versions:
+- **Original version:** 72.0 B, uploaded before versioning was enabled, with a version ID of 'null'.
+- **Modified version:** 133 B, uploaded after versioning was enabled, with a unique version ID.
+- The modified version became the current version, while the original version was preserved as a noncurrent version.
+- **Key learning** S3 Versioning preserves previous versions of an object when new content is uploaded using the same object key. This helps protect against accidental overwrites and object recovery.
+- ![S3 Object Versioning Test](screenshots/09-object-versioning-test.png)
+
 ## Security Considerations
 
 - AWS access keys and secret access keys are not stored in this repository.
