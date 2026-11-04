@@ -101,6 +101,21 @@ The upload completed successfully, confirming that the bucket was functioning as
 - **Key learning** S3 Versioning supports data recovery by preserving previous object versions. This is useful when files are accidentally overwritten or modified. Downloading an older version does not automatically make it the current version in S3.
 - ![Previous S3 Object Version Retrieved](screenshots/10-previous-version-retrieved.png)
 
+- ### 11. Configured S3 Lifecycle Management
+- I configured an Amazon S3 Lifecycle rule to automatically manage older versions of objects stored in the bucket.
+- The lifecycle rule was named expire-noncurrent-versions-after-30-days and was configured with the following settings:
+- **Rule status:** Enabled
+- **Rule scope:** All objects in the bucket
+- **Lifestyle action:** Permanently delete noncurrent object versions
+- **Retention period:** 30 days after an object version becomes noncurrent
+- **Number of newer noncurrent versions retained:** 0
+- **Current object versions:** No expiration action configured
+- With this configuration, Amazon S3 identifies noncurrent object versions that have reached the 30-day threshold and makes them eligible for permanent deletion through lifecycle processing.
+- The rule does not expire the current version of an object.
+- This configuration helps manage storage consumption by preventing unnecessary accumulation of older object versions.
+- **Key learning** S3 Lifecycle Management helps automate storage management and control costs. However, lifecycle expiration must be configured carefully because permanently deleted object versions cannot be recovered.
+- ![S3 Lifecycle Management](screenshots/11-lifecycle-rule.png)
+
 ## Security Considerations
 
 - AWS access keys and secret access keys are not stored in this repository.
