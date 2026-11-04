@@ -45,7 +45,7 @@ The upload completed successfully, confirming that the bucket was functioning as
 
 - ![S3 Object Retrieval](screenshots/03-object-retrieval.png)
 
-- #### 4. Reviewed S3 Block Public Access
+- ### 4. Reviewed S3 Block Public Access
 - I reviewed the S3 bucket's public access settings and confirmed that **Block all public access** was enabled.
 - All four individual Block Public Access settings were enabled to help prevent unintended public access through access control lists (ACLs) and bucket policies.
 - The bucket was kept private because this project did not require anonymous or public access to its objects.
