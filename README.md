@@ -52,6 +52,13 @@ The upload completed successfully, confirming that the bucket was functioning as
 - **Key learning** Cloud storage should remain private by default, and access should only be granted when there is a legitimate requirement.
 - ![S3 Block Public Access](screenshots/04-block-public-access.png)
 
+- ### 5. Reviewed S3 Bucket Ownership and ACLs
+- I reviewed the S3 bucket's Object Ownership setting and confirmed that **Bucket owner enforced** was enabled.
+- With this configuration, access control lists (ACLs) are disabled, and the bucket-owning AWS account owns the objects stored in the bucket.
+- Access to the bucket and its objects is managed through policies, such as IAM policies and S3 bucket policies, rather than ACLs.
+- **Key learning** Using Bucket owner enforced, simplifies ownership and helps centralize access management through policies.
+- ![S3 Object Ownership](screenshots/05-object-ownership.png)
+
 ## Security Considerations
 
 - AWS access keys and secret access keys are not stored in this repository.
