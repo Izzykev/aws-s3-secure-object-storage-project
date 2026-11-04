@@ -75,6 +75,14 @@ The upload completed successfully, confirming that the bucket was functioning as
 - **Key learning** Encryption at rest protects stored data, while access controls determine who is authorized to access the data. Both are important parts of cloud security.
 - ![S3 Default Encryption](screenshots/07-default-encryption.png)
 
+- ### 8. Enabled S3 Bucket Versioning
+- I enabled S3 Bucket Versioning to protect stored objects against accidental overwrites and deletions.
+- Versioning allows Amazon S3 to preserve multiple versions of an object when a new file is uploaded using the same object key (filename).
+- Before enabling versioning, I confirmed that the bucket's versioning status was **Disabled**. I then enabled the feature through the AWS Management Console.
+- This configuration prepared the bucket for testing how Amazon S3 retains and recovers previous versions of stored objects.
+- **Key learning** S3 Versioning helps protect data by preserving earlier object versions. However, each retained version consumes storage and can increase costs.
+- ![S3 Bucket Versioning Enabled](screenshots/08-versioning-enabled.png)
+
 ## Security Considerations
 
 - AWS access keys and secret access keys are not stored in this repository.
