@@ -19,6 +19,12 @@ The objective is to gain hands-on experience with cloud object storage, basic se
 - Review bucket security and permissions
 - Document the project using GitHub
 
+- ## Project Architecture
+- The architecture diagram illustrates how an authorized AWS user manages an Amazon S3 bucket through the AWS Management Console.
+- The bucket is deployed in the US East (Ohio) Region and incorporates security controls, server-side encryption, object versioning, and lifecycle management.
+![AWS S3 Secure Object Storage Architecture](architecture/s3-architecture.png)
+
+
 ## Implementation
 
 ### 1. Created an Amazon S3 Bucket
