@@ -12,12 +12,16 @@ The objective is to gain hands-on experience with cloud object storage, basic se
 
 ## Project Objectives
 
-- Create an Amazon S3 general purpose bucket
-- Understand AWS Region selection
-- Upload objects to S3
-- Retrieve objects from S3
-- Review bucket security and permissions
-- Document the project using GitHub
+- Create and configure an Amazon S3 general purpose bucket.
+- Understand AWS Region selection and its importance.
+- Upload and retrieve objects from Amazon S3.
+- Review S3 security settings, including Block Public Access, Object Ownership, ACLs, and bucket policies.
+- Understand server-side encryption using Amazon S3-managed keys (SSE-S3).
+- Enable and test S3 Object Versioning for data protection and recovery.
+- Configure S3 Lifecycle Management to automatically expire noncurrent object versions after 30 days.
+- Understand Amazon S3 storage costs and basic cost optimization practices.
+- Create an AWS S3 architecture diagram using diagrams.net.
+- Document the project using Git, GitHub, and Markdown.
 
 - ## Project Architecture
 - The architecture diagram illustrates how an authorized AWS user manages an Amazon S3 bucket through the AWS Management Console.
