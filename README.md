@@ -393,6 +393,78 @@ I also learned that technical troubleshooting involves identifying the source of
 
 These experiences strengthened my confidence in working with AWS, GitHub, Markdown, and cloud architecture documentation.
 
+## Cleanup and Project Completion
+
+### 1. Importance of AWS Resource Cleanup
+
+Cloud resources should be reviewed and removed when they are no longer required.
+
+Although this project uses small text files, unused AWS resources may continue to generate costs depending on their configuration and usage.
+
+Proper resource cleanup is therefore an important part of cloud cost management.
+
+### 2. Understanding Cleanup in a Versioning-Enabled Bucket
+
+Amazon S3 Versioning preserves multiple versions of an object.
+
+When versioning is enabled, deleting an object without specifying a version ID normally creates a delete marker rather than permanently deleting all stored versions.
+
+As a result, previous versions may continue occupying storage and generating storage charges.
+
+**Key learning:** Deleting the current view of an S3 object does not necessarily remove all versions of that object.
+
+### 3. Planned Resource Cleanup Procedure
+
+When the learning environment is no longer required, the following procedure will be used:
+
+1. Sign in to the AWS Management Console.
+2. Navigate to Amazon S3.
+3. Select the project bucket.
+4. Review the objects, object versions, and delete markers.
+5. Confirm that any required files or earlier versions have been downloaded or backed up.
+6. Use the S3 **Empty** bucket operation to permanently remove all objects, versions, and delete markers.
+7. Verify that the bucket is empty.
+8. Delete the bucket if it is no longer needed.
+9. Review AWS Billing and Cost Management for any remaining usage or charges.
+
+**Important:** Emptying an S3 bucket permanently deletes its contents, including previous object versions. This action cannot be undone.
+
+### 4. Lifecycle Management and Cleanup
+
+A lifecycle rule named `expire-noncurrent-versions-after-30-days` was configured during this project.
+
+The rule automatically makes noncurrent object versions eligible for permanent deletion after they have been noncurrent for 30 days.
+
+However, this rule does not expire current object versions and is not a substitute for completely emptying and deleting the bucket when the learning environment is retired.
+
+### 5. Project Completion Status
+
+**Technical implementation:** Completed
+
+**Architecture and documentation:** Completed
+
+**Resource cleanup:** Pending — the S3 bucket is being retained temporarily for further AWS learning.
+
+The project demonstrated practical experience with:
+
+- Amazon S3 bucket creation and object storage
+- Object uploading and retrieval
+- S3 security and permissions review
+- Server-side encryption with SSE-S3
+- Object versioning and recovery
+- Lifecycle management
+- AWS architecture diagram creation
+- Git and GitHub project documentation
+
+The project will be considered fully closed once the resources are no longer needed, cleanup has been completed, and the final repository review has been performed.
+
+### 6. Final Project Reflection
+
+This project provided an opportunity to apply AWS cloud storage concepts in a practical environment.
+
+It also reinforced the importance of securing cloud resources, protecting stored data, managing costs, verifying configurations, maintaining technical documentation, and planning for resource cleanup.
+
+The knowledge gained provides a foundation for more advanced AWS projects involving identity and access management, compute, networking, monitoring, and infrastructure automation.
 
 ## Skills Demonstrated
 
