@@ -2,9 +2,15 @@
 
 ## Project Overview
 
-This project demonstrates the creation and use of an Amazon Simple Storage Service (Amazon S3) bucket using the AWS Management Console.
+This project demonstrates the implementation and management of an Amazon Simple Storage Service (Amazon S3) bucket using the AWS Management Console.
 
-The objective is to gain hands-on experience with cloud object storage, basic security practices, and technical documentation.
+The project involved creating an S3 bucket, uploading and retrieving objects, reviewing security configurations, verifying server-side encryption, enabling object versioning, and configuring lifecycle management to help optimize storage costs.
+
+Object versioning was tested to demonstrate how Amazon S3 preserves previous versions of files and supports data recovery.
+
+The project also includes an AWS architecture diagram, implementation screenshots, and technical documentation maintained in GitHub.
+
+**The goal of this project was to gain practical experience in AWS cloud storage, data protection, security, cost management, and technical documentation.**
 
 ## AWS Service Used
 
