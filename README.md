@@ -140,6 +140,34 @@ I configured a lifecycle rule to permanently delete noncurrent object versions a
 I understand that AWS access keys, secret access keys, passwords, and other credentials must not be included in public GitHub repositories. Also, project screenshots should be reviewed to avoid exposing sensitive account information.
 **Key security principle:** Keep cloud resources private by default and grant only the access required for legitimate operations.
 
+## Cost Management
+Cost management was an important consideration throughout this Amazon S3 project. I explored how AWS storage usage, object requests, versioning, and lifecycle management can affect cloud costs.
+### 1. Amazon S3 Storage Costs
+Amazon S3 pricing depends on factors such as the amount of data stored, storage class, duration of storage, request, and applicable data transfer charges.
+For this project, I used the **S3 Standard** storage class and uploaded small text files to keep storage requirements minimal.
+### 2. Object Versioning and Storage Costs
+I enabled S3 Versioning to preserve previous versions of stored objects.
+During testing, Amazon S3 retained the original 72-byte object and the modified 133-byte object.
+Each retained version consumes storage because Amazon S3 stores complete object versions rather than only the differences between them.
+- **Key learning** Versioning improves data recovery capabilities but may increase storage costs as additional versions accumulate.
+### 3. Lifecycle Management for Cost Optimization
+To help manage costs, I configured an S3 Lifecycle rule named expire-noncurrent-versions-after-30-days.
+The rule automatically makes noncurrent object versions eligible for permanent deletions after they have been noncurrent for 30 days.
+The rule does not expire current object versions.
+This demonstrates how lifecycle policies can automate the removal of unnecessary historical data and reduce long-term storage consumption.
+### 4. Cost Monitoring
+AWS Billing and Cost Management provides tools for monitoring cloud spending. AWS Budgets can also be used to set spending thresholds and receive alerts.
+For future projects, monitoring resource usage and reviewing estimated charges will be important practices for avoiding unexpected costs.
+### 5. Cost Management Lessons
+- Use small datasets when learning AWS services.
+- Understand which cloud activities generate charges.
+- Remember that each S3 object version consumes storage.
+- Use lifecycle rules to manage unnecessary object versions.
+- Monitor AWS usage and spending regularly.
+- Remove resources that are no longer needed.
+- **Key learning** Effective cloud engineering involves balancing performance, data protection, availability, and cost efficiency.
+
+
 ## Skills Demonstrated
 
 - Amazon S3
