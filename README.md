@@ -123,11 +123,22 @@ The upload completed successfully, confirming that the bucket was functioning as
 - ![S3 Lifecycle Management](screenshots/11-lifecycle-rule.png)
 
 ## Security Considerations
-
-- AWS access keys and secret access keys are not stored in this repository.
-- Sensitive account information is excluded from screenshots.
-- The S3 bucket name is hidden where it is not necessary for demonstrating the project.
-- Public-access settings will be reviewed carefully before making any object publicly accessible.
+Security was an important consideration throughout this Amazon S3 project. I reviewed the bucket's security settings and maintained configurations that help protect stored objects from unauthorized access.
+### 1. Block Public Access
+I confirmed that **Block all public access** was enabled, including all four individual protection settings. This helps prevent accidental public exposure through ACL and bucket policies.
+### 2. Object Ownership and ACLs
+The bucket uses **Bucket owner enforced** Object Ownership, with Access Control Lists (ACLs) disabled. This allows object access to be managed through policies rather than ACL permissions.
+### 3. Bucket Policy
+I reviewed the bucket policy configuration and confirmed that **no custom bucket policy** was attached. The project did not require public access or additional resource-based permissions.
+### 4. Encryption at Rest
+The bucket uses **Server-Side Encryption with Amazon S3 Managed Keys (SSE-S3)**. This automatically encrypts objects stored in Amazon S3 without requiring manual encryption key management.
+### 5. Object Versioning and Recovery
+I enabled **S3 Versioning** and verified that earlier versions of objects could be preserved. This supports recovery from accidental overwrites and modifications.
+### 6. Lifecycle Management
+I configured a lifecycle rule to permanently delete noncurrent object versions after **30 days**. This helps manage storage costs while providing a defined recovery window. The retention period must be appropriate for the data being stored.
+### 7. Credential Protection
+I understand that AWS access keys, secret access keys, passwords, and other credentials must not be included in public GitHub repositories. Also, project screenshots should be reviewed to avoid exposing sensitive account information.
+**Key security principle:** Keep cloud resources private by default and grant only the access required for legitimate operations.
 
 ## Skills Demonstrated
 
