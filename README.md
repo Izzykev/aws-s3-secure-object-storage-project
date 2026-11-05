@@ -169,7 +169,6 @@ For future projects, monitoring resource usage and reviewing estimated charges w
 
 
 ## Lessons Learned  
-## Lessons Learned
 
 Completing this Amazon S3 project provided practical experience with AWS cloud storage, security, data protection, lifecycle management, GitHub, and technical documentation.
 
@@ -283,6 +282,116 @@ This project helped me progress from understanding basic AWS concepts to perform
 I gained experience with object storage, security configurations, encryption, versioning, lifecycle management, cloud cost awareness, GitHub documentation, and basic architecture design.
 
 Most importantly, I learned the value of understanding **why a cloud configuration is necessary**, rather than simply knowing which buttons to click in the AWS Management Console.
+
+## Challenges and Troubleshooting
+
+During this AWS S3 project, I encountered several challenges involving project documentation, GitHub repository management, Markdown formatting, and cloud architecture visualization.
+
+Resolving these challenges helped me develop practical troubleshooting skills and understand the importance of verifying technical configurations and documentation.
+
+### 1. GitHub README Images Not Displaying
+
+**Challenge:** An architecture diagram did not display correctly in the GitHub README preview.
+
+**Cause:** The Markdown image reference pointed to the `architecture` folder, but the PNG file had been uploaded to the `screenshots` folder. I also encountered a Markdown formatting issue involving an extra backslash before the image path.
+
+**Resolution:**
+
+- Reviewed the Markdown image syntax.
+- Confirmed the correct image filename and folder.
+- Moved `s3-architecture.png` into the `architecture` folder.
+- Corrected the README image reference:
+
+```markdown
+![AWS S3 Secure Object Storage Architecture](architecture/s3-architecture.png)
+```
+
+**Key learning:** Markdown image references must match the actual repository folder structure and filenames.
+
+### 2. Correcting File Organization in GitHub
+
+**Challenge:** The architecture diagram was uploaded to the wrong folder after being committed.
+
+**Cause:** The file was placed inside `screenshots` instead of `architecture`.
+
+**Resolution:**
+
+- Opened the local repository through GitHub Desktop.
+- Moved the PNG file into the correct folder using Windows File Explorer.
+- Verified that GitHub Desktop detected the old path as deleted and the new path as added.
+- Committed and pushed the correction.
+
+**Key learning:** Version control tracks changes to file locations, and maintaining a clear repository structure improves project organization.
+
+### 3. Understanding GitHub Desktop Warnings
+
+**Challenge:** GitHub Desktop displayed a warning about LF and CRLF line endings when adding the editable `.drawio` architecture file.
+
+**Cause:** The diagram file used LF line endings, while Git was configured to convert them to Windows-style CRLF line endings during checkout.
+
+**Resolution:**
+
+- Reviewed the warning to understand its meaning.
+- Confirmed that it was informational rather than evidence of a damaged file.
+- Continued with the commit without making unnecessary changes to Git configuration.
+
+**Key learning:** Not every warning indicates a failure. Understanding the message helps determine whether corrective action is necessary.
+
+### 4. Learning Markdown Formatting
+
+**Challenge:** Some headings appeared smaller than others, and I initially found it difficult to format bullet points, bold text, and image links.
+
+**Cause:** Markdown uses specific symbols to define formatting, including heading levels, lists, emphasis, and image references.
+
+**Resolution:**
+
+- Used three hashtags (`###`) consistently for numbered implementation headings.
+- Used a hyphen followed by a space (`- `) to create bullet points.
+- Used double asterisks (`**`) to make text bold.
+- Used GitHub's Preview feature to verify formatting before committing changes.
+
+**Key learning:** Clear and consistent technical documentation requires understanding basic Markdown syntax.
+
+### 5. Creating the AWS Architecture Diagram
+
+**Challenge:** I initially had difficulty locating AWS shapes, positioning components, adding labels, and connecting shapes in diagrams.net.
+
+**Cause:** The diagramming application was unfamiliar, and some connection arrows and editing controls were not immediately visible.
+
+**Resolution:**
+
+- Enabled the AWS shape library.
+- Added the Amazon S3 icon and an authorized user figure.
+- Used a rounded rectangle to represent the AWS Management Console.
+- Added connectors to show the interaction between the user, console, and S3 bucket.
+- Added a security and management information box.
+- Adjusted spacing and alignment to improve readability.
+- Exported the final diagram as a PNG and retained the editable `.drawio` file.
+
+**Key learning:** Architecture diagrams require clear component relationships, appropriate labels, and consistent visual organization.
+
+### 6. Understanding S3 Object Versioning
+
+**Challenge:** After uploading a modified object, I needed to identify the original and updated versions of the same file.
+
+**Cause:** S3 normally displays the current object view unless object versions are explicitly shown.
+
+**Resolution:**
+
+- Enabled **Show versions** in the S3 console.
+- Identified the original object with a `null` version ID.
+- Identified the modified object using its unique version ID.
+- Confirmed that the earlier object remained stored as a noncurrent version.
+
+**Key learning:** Testing a cloud feature and examining its results are essential for understanding how it behaves.
+
+## Overall Troubleshooting Reflection
+
+This project reinforced the importance of checking configurations, interpreting system messages, verifying file locations, and testing results before considering a task complete.
+
+I also learned that technical troubleshooting involves identifying the source of a problem and applying a specific correction rather than making unnecessary changes.
+
+These experiences strengthened my confidence in working with AWS, GitHub, Markdown, and cloud architecture documentation.
 
 
 ## Skills Demonstrated
